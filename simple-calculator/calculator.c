@@ -19,7 +19,7 @@ int main(void) {
                 printf("Bye!\n");
                 return 0;
             
-            case 1: { /* فتح أقواس معقوفة ضروري لتعريف متغيرات جديدة هنا حسب معيار gnu89 */
+            case 1: { 
                 int a, b, sum;
                 
                 printf("A: ");
@@ -30,21 +30,55 @@ int main(void) {
                 
                 sum = a + b;
                 printf("Result: %d\n\n", sum);
-                
                 break;
             }
             
-            case 2:
-                printf("You selected option 2 (Subtract)\n\n");
+            case 2: { /* تمت إضافة الأقواس هنا */
+                int a, b, result;
+                
+                printf("A: ");
+                scanf("%d", &a);
+                
+                printf("B: ");
+                scanf("%d", &b);
+                
+                result = a - b;
+                printf("Result: %d\n\n", result);
                 break;
+            }
             
-            case 3:
-                printf("You selected option 3 (Multiply)\n\n");
+            case 3: { 
+                int a, b, result;
+                
+                printf("A: ");
+                scanf("%d", &a);
+                
+                printf("B: ");
+                scanf("%d", &b);
+                
+                result = a * b;
+                printf("Result: %d\n\n", result);
                 break;
+            }
             
-            case 4:
-                printf("You selected option 4 (Divide)\n\n");
+            case 4: { 
+                int a, b, result;
+                
+                printf("A: ");
+                scanf("%d", &a);
+                
+                printf("B: ");
+                scanf("%d", &b);
+                
+              
+                if (b == 0) {
+                    printf("Error: Cannot divide by zero\n\n");
+                } else {
+                    result = a / b;
+                    printf("Result: %d\n\n", result);
+                }
                 break;
+            }
             
             default:
                 printf("Invalid choice\n\n");
