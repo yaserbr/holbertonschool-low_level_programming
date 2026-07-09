@@ -19,7 +19,8 @@ int main(void)
 
 	if (last_digit > 5)
 	{
-		printf("Last digit of %d is %d and is greater than 5\n", n, last_digit);
+		printf("Last digit of %d is %d and is greater t
+				han 5\n", n, last_digit);
 	}
 	else if (last_digit == 0)
 	{
@@ -27,7 +28,8 @@ int main(void)
 	}
 	else
 	{
-		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, last_digit);
+		printf("Last digit of %d is %d and is less than 6 and not 0\n"
+				, n, last_digit);
 	}
 
 	return (0);

@@ -11,9 +11,9 @@ int main(void)
 
 	for (letter = 'a'; letter <= 'z'; letter++)
 	{
-		putchar(letter); /* الاستخدام الأول: لطباعة الحروف داخل حلقة التكرار */
+		putchar(letter);
 	}
-	putchar('\n'); /* الاستخدام الثاني: لطباعة سطر جديد بعد انتهاء الحلقة */
+	putchar('\n'); 
 
 	return (0);
 }
