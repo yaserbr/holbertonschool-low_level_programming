@@ -10,7 +10,7 @@
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	while (n-- && src != "\0")
+	while (n--)
 	{
 		dest[n] = src[n];
 	}
