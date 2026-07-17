@@ -21,6 +21,7 @@ char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
 void print_chessboard(char (*a)[8]);
 void print_diagsums(int *a, int size);
+void set_string(char **s, char *to);
 int _strcmp(char *s1, char *s2);
 char *string_toupper(char *str);
 char *cap_string(char *str);
