@@ -2,6 +2,7 @@
 #define MAIN_H
 
 char *create_array(unsigned int size, char c);
+void *malloc_checked(unsigned int b);
 char *_strdup(char *str);
 char *str_concat(char *s1, char *s2);
 int **alloc_grid(int width, int height);
