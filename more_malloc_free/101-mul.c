@@ -1,8 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
 
-#define MAX_RESULT_SIZE 10000
-
 /**
  * print_error - prints Error and exits with status 98
  *
@@ -82,29 +80,13 @@ int is_zero(char *s)
 }
 
 /**
- * check_malloc - checks that malloc can allocate memory
- *
- * Return: Nothing
- */
-void check_malloc(void)
-{
-	void *ptr;
-
-	ptr = malloc(1);
-	if (ptr == NULL)
-		print_error();
-
-	free(ptr);
-}
-
-/**
  * init_array - initializes an integer array with zeros
  * @array: array to initialize
  * @size: number of elements
  *
  * Return: Nothing
  */
-void init_array(unsigned int *array, int size)
+void init_array(int *array, int size)
 {
 	int i;
 
@@ -122,7 +104,7 @@ void init_array(unsigned int *array, int size)
  *
  * Return: Nothing
  */
-void multiply(char *num1, char *num2, unsigned int *result, int len1, int len2)
+void multiply(char *num1, char *num2, int *result, int len1, int len2)
 {
 	int i, j, n1, n2, sum;
 
@@ -146,7 +128,7 @@ void multiply(char *num1, char *num2, unsigned int *result, int len1, int len2)
  *
  * Return: Nothing
  */
-void print_result(unsigned int *result, int size)
+void print_result(int *result, int size)
 {
 	int i;
 
@@ -172,7 +154,7 @@ void print_result(unsigned int *result, int size)
 int main(int argc, char *argv[])
 {
 	int len1, len2, size;
-	unsigned int result[MAX_RESULT_SIZE];
+	int *result;
 
 	if (argc != 3)
 		print_error();
@@ -191,13 +173,14 @@ int main(int argc, char *argv[])
 	len2 = _strlen(argv[2]);
 	size = len1 + len2;
 
-	if (size > MAX_RESULT_SIZE)
+	result = malloc(sizeof(int) * size);
+	if (result == NULL)
 		print_error();
 
-	check_malloc();
 	init_array(result, size);
 	multiply(argv[1], argv[2], result, len1, len2);
 	print_result(result, size);
 
+	free(result);
 	return (0);
 }
