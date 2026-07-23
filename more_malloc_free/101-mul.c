@@ -59,6 +59,27 @@ int is_digits(char *s)
 }
 
 /**
+ * is_zero - checks whether a string represents zero
+ * @s: string to check
+ *
+ * Return: 1 if the number is zero, 0 otherwise
+ */
+int is_zero(char *s)
+{
+	int i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] != '0')
+			return (0);
+		i++;
+	}
+
+	return (1);
+}
+
+/**
  * init_array - initializes an integer array with zeros
  * @array: array to initialize
  * @size: number of elements
@@ -140,6 +161,13 @@ int main(int argc, char *argv[])
 
 	if (!is_digits(argv[1]) || !is_digits(argv[2]))
 		print_error();
+
+	if (is_zero(argv[1]) || is_zero(argv[2]))
+	{
+		_putchar('0');
+		_putchar('\n');
+		return (0);
+	}
 
 	len1 = _strlen(argv[1]);
 	len2 = _strlen(argv[2]);
