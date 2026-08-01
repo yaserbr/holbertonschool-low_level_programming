@@ -41,3 +41,10 @@ Prototype:
 ```c
 void print_all(const char * const format, ...);
 ```
+
+## Task 4 - Real programmers can write assembly code in any language
+
+Write a 64-bit program in assembly that prints `Hello, World`, followed by a
+new line.
+
+The implementation file for this task is `100-hello_world.asm`.
