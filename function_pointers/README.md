@@ -38,3 +38,20 @@ int int_index(int *array, int size, int (*cmp)(int));
 ```
 
 The implementation file for this task is `2-int_index.c`.
+
+## Task 3 - A goal is not always meant to be reached, it often serves simply as something to aim at
+
+Write a program that performs simple operations.
+
+Usage:
+
+```sh
+calc num1 operator num2
+```
+
+The files for this task are:
+
+* `3-main.c`
+* `3-op_functions.c`
+* `3-get_op_func.c`
+* `3-calc.h`
