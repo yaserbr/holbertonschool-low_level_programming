@@ -55,3 +55,15 @@ The files for this task are:
 * `3-op_functions.c`
 * `3-get_op_func.c`
 * `3-calc.h`
+
+## Task 4 - Most hackers are young because young people tend to be adaptable
+
+Write a program that prints the opcodes of its own main function.
+
+Usage:
+
+```sh
+./main number_of_bytes
+```
+
+The implementation file for this task is `100-main_opcodes.c`.
