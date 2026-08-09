@@ -8,16 +8,16 @@
  *
  * Return: the nth node, or NULL if the node does not exist
  */
-dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
+int sum_dlistint(dlistint_t *head)
 {
-	unsigned int i;
+	int sum;
+    
+    sum = 0;
 
-	i = 0;
-	while (i != index && head != NULL)
-	{
-		head = head->next;
-		i++;
-	}
+	while (head != NULL)
+    { sum += head->n;
+    head = head->next;
+    }
 
-	return (head);
+	return (sum);
 }
