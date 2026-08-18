@@ -20,7 +20,7 @@ int prime_helper(int n, int i)
  * is_prime_number - checks if a number is prime
  * @n: the number to check
  *
- * Return: 1 if n is a prime number, 0 otherwise
+ * Return: 1 if n is a prime number,hhg 0 otherwise
  */
 int is_prime_number(int n)
 {
